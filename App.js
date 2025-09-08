@@ -79,7 +79,7 @@ function Change() {
 function Students({ name, age, className }) {
   const [show, set] = useState(false);
   return (
-    <div style={{ border: "3px solid red", padding: "10px", margin: "10px" }}>
+    <div style={{ border: "5px solid red", padding: "10px", margin: "10px" }}>
       <h3>{name}</h3>
       <button onClick={() => set(!show)}>
         {show ? "Ẩn chi tiết" : "Xem chi tiết"}
@@ -124,12 +124,8 @@ function Clock() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
-    const timer = setInterval(
-      () => setTime(new Date().toLocaleTimeString()),
-      1000
-    );
-    return () => clearInterval(timer);
-  }, []);
+    const timer = setInterval(() => setTime(new Date().toLocaleTimeString()),1000);
+    return () => clearInterval(timer);}, []);
 
   return (
     <div style={{ marginBottom: "30px" }}>
@@ -139,14 +135,22 @@ function Clock() {
   );
 }
 
-// ===== APP CHÍNH =====
+
 function App() {
   return (
     <div style={{ padding: "20px" }}>
       <Counter />
+      <br />
+      <hr />
       <TodoList />
+      <br />
+      <hr />
       <Change />
+      <br />
+      <hr />
       <StudentList />
+      <br />
+      <hr />
       <Clock />
     </div>
   );
