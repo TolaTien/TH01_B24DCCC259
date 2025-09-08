@@ -7,7 +7,7 @@ function Counter() {
   return (
     <div>
       <h1>Bài 1: Ứng dụng đếm số</h1>
-      <h2>Giá trị hiện tại: {count}</h2>
+      <h3>Giá trị hiện tại: {count}</h3>
       <div style={{ marginTop: "20px" }}>
         <button onClick={() => setCount(count - 1)} style={{ marginLeft: "10px" }}>-</button>
         <button onClick={() => setCount(count + 1)} style={{ marginLeft: "10px" }}>+</button>
