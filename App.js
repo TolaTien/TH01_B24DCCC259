@@ -79,7 +79,7 @@ function Change() {
 function Students({ name, age, className }) {
   const [show, set] = useState(false);
   return (
-    <div style={{ border: "5px solid red", padding: "10px", margin: "10px" }}>
+    <div style={{ border: "3px solid black", padding: "10px", margin: "10px" }}>
       <h3>{name}</h3>
       <button onClick={() => set(!show)}>
         {show ? "Ẩn chi tiết" : "Xem chi tiết"}
